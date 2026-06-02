@@ -1,0 +1,12 @@
+services:
+  mongodb-reporte:
+    image: mongo:7.0
+    environment:
+      MONGO_INITDB_DATABASE: db_reporte
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_reporte_data:/data/db
+
+volumes:
+  mongodb_reporte_data:
